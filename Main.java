@@ -90,7 +90,44 @@ public static void q07(){
 
     //in.close();
 }
+
+public static void q08(){
+    Scanner in = new Scanner(System.in);
+    System.out.print("Digite a primeira nota:");
+    float nota1 = in.nextFloat();
+    System.out.print("Digite a segunda nota:");
+    float nota2 = in.nextFloat();
+    
+    boolean AF = false;
+    float MF = (nota1 + nota2)/2;
+    if (MF >= 7) {
+        System.out.println("Aluno aprovado");
+    }else{
+        if (MF >= 4) {
+           System.out.println("Aluno deverá realizar AF");
+           AF = true;
+        }else{
+            System.out.println("Aluno reprovado direto");
+        }
+    }
+
+    if (AF) {
+        System.out.print("Digite a nota da AF:");
+        float notaAF = in.nextFloat();
+
+        System.out.println("MF sem considerar a AF: " + MF);
+        MF = (MF + notaAF)/2;
+        System.out.println("MF considerarando a AF: " + MF);
+        if (notaAF >=4 && MF >= 5) {
+            System.out.println("Aprovado conceito B");
+        }else{
+            System.out.println("Reprovado após AF");
+        }
+    }
+    //in.close();
+}
+
 public static void main(String[] args) {
-    q07();
+    q08();
 }
 }
