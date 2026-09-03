@@ -6,6 +6,7 @@ public static void q01(){
     
     System.out.println("Olá Mundo");
 }
+
 public static void q02(){
 
     Scanner in = new Scanner(System.in);
@@ -74,7 +75,22 @@ public static void q06(){
     }
 }
 
+public static void q07(){
+    Scanner in = new Scanner(System.in);
+    System.out.print("Quantas notas serão usadas:");
+    int notas = in.nextInt();
+
+    float notasSoma = 0;
+    for(int i = 0; i < notas;i++){
+        System.out.print("Nota:");
+        float notaI = in.nextFloat();
+        notasSoma += notaI;
+    }
+    System.out.println("Média das notas:" + notasSoma/notas);
+
+    //in.close();
+}
 public static void main(String[] args) {
-    q01();
+    q07();
 }
 }
