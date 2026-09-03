@@ -49,8 +49,32 @@ public static void q05(){
     System.out.print("Área do circulo: " + Math.PI * raio * raio);
 }
 
-public static void main(String[] args) {
-    q05();
+public static void q06(){
+    Scanner in = new Scanner(System.in);
+    System.out.print("Digite o valor do 1° produto: ");
+    float valor1 = in.nextFloat();  
+    System.out.print("Digite o valor do 2° produto: ");
+    float valor2 = in.nextFloat();
+    System.out.print("Digite o valor do 3° produto: ");
+    float valor3 = in.nextFloat();
+    in.close();
+    
+    if (valor1 < valor2) {
+        if(valor1 < valor3) {
+            System.out.println("O produto comprado é o 1° produto");
+        } else {
+            System.out.println("O produto comprado é o 3° produto");
+        }
+    }else{
+        if(valor2 < valor3) {
+            System.out.println("O produto comprado é o 2° produto");
+        } else {
+            System.out.println("O produto comprado é o 3° produto");
+        }
+    }
+}
 
+public static void main(String[] args) {
+    q01();
 }
 }
