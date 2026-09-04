@@ -127,7 +127,7 @@ public static void q08(){
     //in.close();
 }
 
-public static void q09() {
+public static void q09(){
 		Scanner in = new Scanner(System.in);
 		System.out.print("Digite o 1° valor: ");
 		float valor1 = in.nextFloat();
@@ -156,7 +156,25 @@ public static void q10(){
     }
 }
 
+public static void q11(){
+
+    Scanner in = new Scanner(System.in);
+	System.out.print("Digite um número inteiro de 0 a 10: ");
+	int valorInteiro = in.nextInt();
+    while ( 0 > valorInteiro || valorInteiro > 10 ) {
+        System.out.print("Valor inválido");
+        System.out.print("Digite um número inteiro de 0 a 10: ");
+	    valorInteiro = in.nextInt();
+    }
+	//in.close();
+
+    System.out.println("Tabuada do número: " + valorInteiro);
+    for (int i = 1; i < 10; i++) {
+        System.out.println( valorInteiro +" x "+ i +": " + (valorInteiro*i));
+    }
+
+}
 public static void main(String[] args) {
-    q10();
+    q11();
 }
 }
