@@ -127,7 +127,22 @@ public static void q08(){
     //in.close();
 }
 
+public static void q09() {
+		Scanner in = new Scanner(System.in);
+		System.out.print("Digite o 1° valor: ");
+		float valor1 = in.nextFloat();
+		System.out.print("Digite o 2° valor: ");
+		float valor2 = in.nextFloat();
+		System.out.print("Digite o 3° valor: ");
+		float valor3 = in.nextFloat();
+		//in.close();
+    
+        float valorMaior = Math.max(valor1, Math.max(valor2, valor3));
+
+		System.out.println("O maior valor é: " + valorMaior);
+	}
+
 public static void main(String[] args) {
-    q08();
+    q09();
 }
 }
