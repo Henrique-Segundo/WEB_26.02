@@ -172,9 +172,25 @@ public static void q11(){
     for (int i = 1; i < 10; i++) {
         System.out.println( valorInteiro +" x "+ i +": " + (valorInteiro*i));
     }
+}
 
+public static void q12(){
+
+    //Essa restrição estava na questão 11
+    Scanner in = new Scanner(System.in);
+	System.out.print("Digite um número inteiro de 0 a 10: ");
+	int valorInteiro = in.nextInt();
+    while ( 0 > valorInteiro || valorInteiro > 10 ) {
+        System.out.print("Valor inválido");
+        System.out.print("Digite um número inteiro de 0 a 10: ");
+	    valorInteiro = in.nextInt();
+    }
+	//in.close();
+
+    System.out.println("O valor é valido, o número digitado foi: "  + valorInteiro);
+    
 }
 public static void main(String[] args) {
-    q11();
+    q12();
 }
 }
