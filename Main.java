@@ -190,7 +190,46 @@ public static void q12(){
     System.out.println("O valor é valido, o número digitado foi: "  + valorInteiro);
     
 }
+
+public static void q13(){
+
+    System.out.print("Sistema de votação dos candidatos A,B,C");
+    System.out.print("Número dos candidatos: A = 1,B = 2,C = 3");
+    int votosA = 0,votosB = 0,votosC = 0;
+
+    Scanner in = new Scanner(System.in);
+	System.out.print("Digite o número de eleitores:");
+	int eleitores = in.nextInt();
+
+    for (int i = 0; i < eleitores; i++) {
+        System.out.print("Digite o número do seu candidato:");
+	    int votoAtual = in.nextInt();
+
+        switch (votoAtual) {
+            case 1 -> {
+                System.out.println("Voto para o candidato A");
+                votosA++;
+            }
+            case 2 -> {
+                System.out.println("Voto para o candidato B");
+                votosB++;
+            }
+            case 3 -> {
+                System.out.println("Voto para o candidato C");
+                votosC++;
+            }
+            default -> System.out.println("Voto nulo ou invalido");
+        }
+    }
+	//in.close();
+
+    System.out.println("Contagem de votos: ");
+    System.out.println("Candidato A: " + votosA);
+    System.out.println("Candidato B: " + votosB);
+    System.out.println("Candidato C: " + votosC);
+
+}
 public static void main(String[] args) {
-    q12();
+    q13();
 }
 }
