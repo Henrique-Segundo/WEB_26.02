@@ -142,7 +142,21 @@ public static void q09() {
 		System.out.println("O maior valor é: " + valorMaior);
 	}
 
+public static void q10(){
+
+    Scanner in = new Scanner(System.in);
+	System.out.print("Digite um valor inteiro: ");
+	int valorInteiro = in.nextInt();
+	//in.close();
+		
+    if (valorInteiro % 2 == 0) {
+        System.out.print("O valor é par");
+    }else{
+        System.out.print("O valor é impar");
+    }
+}
+
 public static void main(String[] args) {
-    q09();
+    q10();
 }
 }
