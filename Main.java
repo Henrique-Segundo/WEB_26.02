@@ -277,7 +277,21 @@ public static void q15(){
     }
 }
 
+public static void q16(){
+    //Questão realizada com ajuda do colega eduardo
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Insira um valor natural: ");
+    int n =  scan.nextInt();
+    int fatorial = n;
+        
+    for(int i=n-1; i>1; i--){
+        System.out.println(fatorial+" vezes "+i+" = "+(fatorial = fatorial * i));
+    }
+        
+    System.out.println("O fatorial do número: "+n+" é: "+fatorial);
+}
+
 public static void main(String[] args) {
-    q15();
+    q16();
 }
 }
