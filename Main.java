@@ -140,7 +140,7 @@ public static void q09(){
         float valorMaior = Math.max(valor1, Math.max(valor2, valor3));
 
 		System.out.println("O maior valor é: " + valorMaior);
-	}
+}
 
 public static void q10(){
 
@@ -229,7 +229,38 @@ public static void q13(){
     System.out.println("Candidato C: " + votosC);
 
 }
+
+public static void q14(){
+    //Questão realizada com ajuda do colega eduardo
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Insira 10 números inteiros maiores que 1: ");
+    for(int i=0; i<10; i++){
+        System.out.println("Insira um número: ");
+        int n = scan.nextInt();
+        
+        while(n <= 1){
+            System.out.println("Insira um número válido maior que 1: ");
+            n = scan.nextInt();
+        }
+        
+        if(n == 2){
+            System.out.println("O número: 2 é primo");
+            continue;
+            }
+        for(int j=2; j<n; j++){
+            if(n%j != 0){
+                if(j == n-1){
+                    System.out.println("O número: " + n + " é primo");
+                }}
+            else {
+                System.out.println("O número: " + n + " não é primo");
+                break;
+            }
+        }
+    }
+}
+
 public static void main(String[] args) {
-    q13();
+    q14();
 }
 }
