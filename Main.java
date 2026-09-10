@@ -323,7 +323,30 @@ public static void q18(){
     //in.close();    
 }
 
+public static void q19(){
+    int[] vetor = new int[5];
+    int soma = 0;
+    int multiplicacao = 1;
+
+    Scanner in = new Scanner(System.in);
+    for(int i = 0;i < 5; i++){
+        System.out.println("Insira um valor na posição "+ i +" do vetor: ");
+        int valor = in.nextInt();
+        vetor[i] = valor;
+        soma += valor;
+        multiplicacao = multiplicacao * valor;
+    }
+    //in.close();
+
+    System.out.println("A soma dos valores do vetor é: " + soma);
+    System.out.println("A multiplicação dos valores do vetor é: " + multiplicacao);
+
+    for(int i = 0;i < 5; i++){
+        System.out.println("O valor na posição "+ i +" do vetor é: " + vetor[i]);
+    }
+}
+
 public static void main(String[] args) {
-    q18();
+    q19();
 }
 }
