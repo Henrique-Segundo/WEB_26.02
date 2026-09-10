@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main{
@@ -346,7 +347,45 @@ public static void q19(){
     }
 }
 
+public static void q20(){
+    int[] vetor = new int[20];
+    int parQuant = 0;
+    int imparQuant = 0;
+
+    Scanner in = new Scanner(System.in);
+    for(int i = 0;i < 20; i++){
+        System.out.println("Insira um valor na posição "+ i +" do vetor: ");
+        int valor = in.nextInt();
+        vetor[i] = valor;
+        if (valor % 2 == 0) { //par
+            parQuant++;
+        }else{ //impar
+            imparQuant++;
+        }
+    }
+    //in.close();
+
+    int[] parVetor = new int[parQuant];
+    int[] imparVetor = new int[imparQuant];
+    int parIndex = 0;
+    int imparIndex = 0;
+    
+    for(int i = 0;i < 20; i++){
+        if (vetor[i] % 2 == 0) { //par
+            parVetor[parIndex] = vetor[i];
+            parIndex++;
+        }else{ //impar
+            imparVetor[imparIndex] = vetor[i];
+            imparIndex++;
+        }
+    }
+
+    System.out.println("O vetor completo é: " + Arrays.toString(vetor));
+    System.out.println("O vetor de numeros pares é: " + Arrays.toString(parVetor));
+    System.out.println("O vetor de numeros impares é: " + Arrays.toString(imparVetor));
+}
+
 public static void main(String[] args) {
-    q19();
+    q20();
 }
 }
