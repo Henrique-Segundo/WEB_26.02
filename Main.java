@@ -391,7 +391,8 @@ public static void q21(){
     String string1 = in.nextLine();
     System.out.println("Insira a String 2:");
     String string2 = in.nextLine();
-    
+    //in.close();
+
     System.out.println("O conteúdo da String 1 é: \""+string1+ "\" seu comprimento é de "+string1.length() + " caracteres");
     System.out.println("O conteúdo da String 2 é: \"" + string2 + "\", e seu comprimento é de "+string2.length() + " caracteres");
 
@@ -408,7 +409,23 @@ public static void q21(){
     }
 }
 
+public static void q22(){
+
+    //Questão realizada com ajuda do colega eduardo
+    Scanner in = new Scanner(System.in);
+    System.out.println("Insira um valor inteiro:");
+    int valor = in.nextInt();
+    //in.close();
+
+    int valorInverso = 0;
+    while(valor != 0){
+        valorInverso = valorInverso *10 + valor % 10;
+        valor = valor / 10;
+    }
+    System.out.println("O inverso do valor é: " +valorInverso);
+}
+
 public static void main(String[] args) {
-    q21();
+    q22();
 }
 }
