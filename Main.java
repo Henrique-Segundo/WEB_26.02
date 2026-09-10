@@ -260,7 +260,24 @@ public static void q14(){
     }
 }
 
+public static void q15(){
+    //Questão realizada com ajuda do colega eduardo
+    int valor = 1;
+    int valorAnterior = 0;
+    
+    for(int i=0; i<10; i++){
+        if(i <= 1){
+            System.out.println("Indíce "+i+" da sequência de Fibonacci: " + i);
+            continue;
+        }
+    System.out.println("Indíce: "+i+" da sequência de Fibonacci: " + (valor+valorAnterior));
+    int novoValor =  valorAnterior+valor;
+    valorAnterior = valor;
+    valor = novoValor;
+    }
+}
+
 public static void main(String[] args) {
-    q14();
+    q15();
 }
 }
