@@ -385,7 +385,30 @@ public static void q20(){
     System.out.println("O vetor de numeros impares é: " + Arrays.toString(imparVetor));
 }
 
+public static void q21(){
+    Scanner in = new Scanner(System.in);
+    System.out.println("Insira a String 1:");
+    String string1 = in.nextLine();
+    System.out.println("Insira a String 2:");
+    String string2 = in.nextLine();
+    
+    System.out.println("O conteúdo da String 1 é: \""+string1+ "\" seu comprimento é de "+string1.length() + " caracteres");
+    System.out.println("O conteúdo da String 2 é: \"" + string2 + "\", e seu comprimento é de "+string2.length() + " caracteres");
+
+    if(string1.length()==string2.length()){
+        System.out.println("As strings possuem o mesmo tamanho");
+        
+        if(string1.equals(string2)){
+            System.out.println("Alem de possuir o mesmo tamanho, as strings são iguais");
+        }else{
+            System.out.println("Apesar de possuir o mesmo tamanho, as strings são diferentes");
+        }
+    }else{
+        System.out.println("As strings possuem tamanhos diferentes");
+    }
+}
+
 public static void main(String[] args) {
-    q20();
+    q21();
 }
 }
