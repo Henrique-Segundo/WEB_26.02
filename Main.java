@@ -425,7 +425,41 @@ public static void q22(){
     System.out.println("O inverso do valor é: " +valorInverso);
 }
 
+public static void q23(){
+
+Scanner in = new Scanner(System.in);
+System.out.println("Insira o primeiro valor numerico : ");
+float valor1 = in.nextFloat();
+System.out.println("Insira o segundo valor numerico : ");
+float valor2 = in.nextFloat();
+System.out.println("Escolha a operação a ser realizada, 1 - Soma, 2 - Subtração, 3 - Multiplicação ou 4 - Divisão: ");
+int operador = in.nextInt();
+//in.close();
+
+float resultado;
+switch (operador) {
+    case 1 -> {
+        resultado = valor1 + valor2;
+        System.out.println("Soma dos dois valores: " + resultado);
+        }
+    case 2 -> {
+        resultado = valor1 - valor2;
+        System.out.println("Subtração dos dois valores: " + resultado);
+        }
+    case 3 -> {
+        resultado = valor1 * valor2;
+        System.out.println("Multiplicação dos dois valores: " + resultado);
+        }
+    case 4 -> {
+        resultado = valor1 / valor2;
+        System.out.println("Divisão dos dois valores: " + resultado);
+        }
+    default -> System.out.println("Formato da operação incorreta");
+}
+
+}
+
 public static void main(String[] args) {
-    q22();
+    q23();
 }
 }
