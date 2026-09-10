@@ -291,7 +291,23 @@ public static void q16(){
     System.out.println("O fatorial do número: "+n+" é: "+fatorial);
 }
 
+public static void q17(){
+    int[] vetor = new int[5];
+
+    Scanner in = new Scanner(System.in);
+    for(int i = 0;i < 5; i++){
+        System.out.println("Insira um valor na posição "+ i +" do vetor: ");
+        int valor = in.nextInt();
+        vetor[i] = valor;
+    }
+
+    for(int i = 0;i < 5; i++){
+        System.out.println("O valor na posição "+ i +" do vetor é: " + vetor[i]);
+    }
+    //in.close();
+}
+
 public static void main(String[] args) {
-    q16();
+    q17();
 }
 }
