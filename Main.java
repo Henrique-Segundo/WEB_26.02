@@ -307,7 +307,23 @@ public static void q17(){
     //in.close();
 }
 
+public static void q18(){
+    float[] vetor = new float[10];
+
+    Scanner in = new Scanner(System.in);
+    for(int i = 0;i < 10; i++){
+        System.out.println("Insira um valor na posição "+ i +" do vetor: ");
+        float valor = in.nextFloat();
+        vetor[i] = valor;
+    }
+
+    for(int i = 9;i > -1; i--){
+        System.out.println("O valor na posição "+ i +" do vetor é: " + vetor[i]);
+    }
+    //in.close();    
+}
+
 public static void main(String[] args) {
-    q17();
+    q18();
 }
 }
