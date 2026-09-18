@@ -10,3 +10,11 @@ function q1_validar() {
     }
     return true;
 }
+
+function q2_validar(){}
+function q3_validar(){}
+function q4_validar(){}
+function q5_validar(){}
+function q6_validar(){}
+function q7_validar(){}
+function q8_validar(){}

@@ -20,10 +20,10 @@
         associada ao evento onsubmit na tag form
     </p>
 
-    <form onsubmit="return q1_validar()" >
-        <label for "Q1txt"> Texto obrigatório* </label>
+    <form onsubmit="return q1_validar()">
+        <label for "q1txt"> Texto obrigatório* </label>
         <input type="text" id="q1txt" />
-        <input type="submit" value = "Enviar" />
+        <input type="submit" value="Enviar" />
     </form>
 
     <h2>Questão 2</h2>
@@ -38,6 +38,13 @@
         tipo texto está preenchido corretamente, deve ser
         disparada por meio de um clique em um botão HTML
     </p>
+
+    <form onsubmit="return q2_validar()">
+        <label for "q2txt"> Texto obrigatório* (mínimo 1 caractere e no máximo 10 caracteres)</label>
+        <input type="text" id="q2txt" />
+        <input type="submit" value="Enviar" />
+    </form>
+
     <h2>Questão 3</h2>
     <p>
         Crie um formulário HTML que possua um
@@ -51,6 +58,13 @@
         ser disparada por meio de um clique em um botão
         HTML
     </p>
+
+    <form onsubmit="return q3_validar()">
+        <label for "q3txt"> Texto obrigatório* (um número inteiro positivo válido)</label>
+        <input type="text" id="q3txt" />
+        <input type="submit" value="Enviar" />
+    </form>
+
     <h2>Questão 4</h2>
     <p>
         Crie um formulário HTML que possua um único
@@ -65,6 +79,18 @@
         ser disparada por meio de um clique em um botão
         HTML
     </p>
+
+    <form onsubmit="return q4_validar()">
+        <label for "q4combo"> Combobox*</label>
+        <input list="q4list" id="q4combo" />
+        <datalist id="q4list">
+            <option value="Opção 1"></option>
+            <option value="Opção 2"></option>
+            <option value="Opção 3"></option>
+        </datalist>
+        <input type="submit" value="Enviar" />
+    </form>
+
     <h2>Questão 5</h2>
     <p>
         Crie um formulário HTML que possua um
@@ -76,6 +102,13 @@
         checkbox está selecionado, deve ser disparada por
         meio de um clique em um botão HTML
     </p>
+
+    <form onsubmit="return q5_validar()">
+        <label for "q5check"> Checkbox*</label>
+        <input type="checkbox" id="q5check" />
+        <input type="submit" value="Enviar" />
+    </form>
+
     <h2>Questão 6</h2>
     <p>
         Crie um formulário HTML que possua vários
@@ -88,6 +121,21 @@
         deve ser disparada por meio de um clique em um
         botão HTML
     </p>
+
+    <form onsubmit="return q6_validar()">
+        <label for "q6check1"> Checkbox 1</label>
+        <input type="checkbox" id="q6check1" />
+        <label for "q6check2"> Checkbox 2</label>
+        <input type="checkbox" id="q6check2" />
+        <label for "q6check3"> Checkbox 3</label>
+        <input type="checkbox" id="q6check3" />
+        <label for "q6check4"> Checkbox 4</label>
+        <input type="checkbox" id="q6check4" />
+        <label for "q6check5"> Checkbox 5</label>
+        <input type="checkbox" id="q6check5" />
+        <input type="submit" value="Enviar" />
+    </form>
+
     <h2>Questão 7</h2>
     <p>
         Crie um formulário HTML que possua vários
@@ -100,6 +148,18 @@
         disparada por meio de um clique em um botão
         HTML
     </p>
+
+    <form onsubmit="return q7_validar()">
+        <legend>Escolha uma opção*:</legend>
+        <label for "q7radio1"> Opção 1</label>
+        <input type="radio" id="q7radio1" name="q7radio" />
+        <label for "q7radio2"> Opção 2</label>
+        <input type="radio" id="q7radio2" name="q7radio" />
+        <label for "q7radio3"> Opção 3</label>
+        <input type="radio" id="q7radio3" name="q7radio" />
+        <input type="submit" value="Enviar" />
+    </form>
+
     <h2>Questão 8</h2>
     <p>
         Crie um formulário HTML que possua os seguintes
@@ -116,6 +176,17 @@
         formulário HTML estão preenchido corretamente, deve
         estar associada ao evento onsubmit na tag form
     </p>
+
+    <form onsubmit="return q8_validar()">
+        <label for "q8nome"> Nome* </label>
+        <input type="text" id="q8nome" />
+        <label for "q8login"> login* </label>
+        <input type="text" id="q8login" />
+        <label for "q8senha"> senha* </label>
+        <input type="text" id="q8senha" />
+        <input type="submit" value="Enviar" />
+    </form>
+
 </body>
 
 </html>
