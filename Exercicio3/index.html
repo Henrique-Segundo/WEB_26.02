@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Exercício 3</title>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
@@ -18,6 +19,13 @@
         do tipo texto está preenchido com algo, deve estar
         associada ao evento onsubmit na tag form
     </p>
+
+    <form onsubmit="return q1_validar()" >
+        <label for "Q1txt"> Texto obrigatório* </label>
+        <input type="text" id="q1txt" />
+        <input type="submit" value = "Enviar" />
+    </form>
+
     <h2>Questão 2</h2>
     <p>
         Crie um formulário HTML que possua um único
