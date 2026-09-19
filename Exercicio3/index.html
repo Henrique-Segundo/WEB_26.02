@@ -82,12 +82,13 @@
 
     <form onsubmit="return q4_validar()">
         <label for "q4combo"> Combobox*</label>
-        <input list="q4list" id="q4combo" />
-        <datalist id="q4list">
-            <option value="Opção 1"></option>
-            <option value="Opção 2"></option>
-            <option value="Opção 3"></option>
-        </datalist>
+        <select name="q4combo" id="q4combo">
+            <option value="-1">Não selecionado</option>
+            <option value="Opção 1">Opção 1</option>
+            <option value="Opção 2">Opção 2</option>
+            <option value="Opção 3">Opção 3</option>
+        </select>
+        
         <input type="submit" value="Enviar" />
     </form>
 

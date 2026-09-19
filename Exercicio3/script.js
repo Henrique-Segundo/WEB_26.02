@@ -86,11 +86,15 @@ function validarCampoNumericoInteiroPositivo(id) {
     var valor = document.getElementById(id).value;
     /*testa se o numero é positivo*/
     if (valor <= 0) {
-        alert("valor numérico negativo ou igual a 0")
+        alert("valor numérico negativo ou igual a 0");
         return false;
     }
     /*testa se o numero é inteiro*/
-    //falta fazer
+    if (!(valor % 1 === 0)) {
+        alert("valor numérico não é inteiro");
+        return false;
+    }
+    return true;
 }
 
 function validarCampoCombobox(id) {
@@ -100,12 +104,13 @@ function validarCampoCombobox(id) {
         alert("O elemento não existe");
         return false;
     }
-    var indice = document.getElementById(id).selectedIndex;
+    var indice = document.getElementById(id);
     /*testa se alguma opção foi selecionada*/
-    if (indice == null || indice < 0) {
+    if (indice == null || indice.value < 0) {
         alert("Nenhuma opção selecionada");
         return false;
     }
+    alert("Opção selecionada: " + indice.value);
     return true;
 }
 
