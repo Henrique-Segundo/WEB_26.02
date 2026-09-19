@@ -8,7 +8,9 @@ function q1_validar() {
 function q2_validar() {
     validarCampoTextoTamanho("q2txt", 1, 10);
 }
-function q3_validar() { }
+function q3_validar() {
+    validarCampoNumericoInteiroPositivo("q3txt");
+}
 function q4_validar() { }
 function q5_validar() { }
 function q6_validar() { }
@@ -49,4 +51,32 @@ function validarCampoTextoTamanho(id, minimo, maximo) {
         return false;
     }
     return true;
+}
+
+function validarCampoNumerico(id) {
+    /*testa se o elemento existe e não está vazio*/
+    if (!validarCampoTextoObrigatorio(id)) {
+        return false;
+    }
+    var valor = document.getElementById(id).value;
+    /*testa se o elemento é não numerico*/
+    if (isNaN(valor)) {
+        alert("O campo de texto está com elementos não numericos");
+        return false;
+    }
+    return true;
+}
+function validarCampoNumericoInteiroPositivo(id){
+    /*testa se o elemento existe, não está vazio ou é não numerico*/
+    if(!validarCampoNumerico(id)){
+        return false;
+    }
+    var valor = document.getElementById(id).value;
+    /*testa se o numero é positivo*/
+    if(valor <= 0){
+        alert("valor numérico negativo ou igual a 0")
+        return false;
+    }
+    /*testa se o numero é inteiro*/
+    //falta fazer
 }
