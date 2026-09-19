@@ -5,7 +5,9 @@ function q1_validar() {
     validarCampoTextoObrigatorio("q1txt");
 }
 
-function q2_validar() { }
+function q2_validar() {
+    validarCampoTextoTamanho("q2txt", 1, 10);
+}
 function q3_validar() { }
 function q4_validar() { }
 function q5_validar() { }
@@ -25,6 +27,25 @@ function validarCampoTextoObrigatorio(id) {
     /* testa se o valor é vazio ou formado por apenas espaços em branco */
     if (el.value == null || el.value.length == 0 || (/^\s+$/.test(el.value))) {
         alert("O campo de texto está vazio");
+        return false;
+    }
+    return true;
+}
+
+function validarCampoTextoTamanho(id, minimo, maximo) {
+    /*testa se o elemento existe e não está vazio*/
+    if (!validarCampoTextoObrigatorio(id)) {
+        return false;
+    }
+    var valor = document.getElementById(id).value;
+    /*testa se o elemento está com menos que o minimo necessario de caracteres*/
+    if (valor.length < minimo) {
+        alert("O campo de texto está com menos caracteres do que o minimo");
+        return false;
+    }
+    /*testa se o elemento está com mais que o maximo permitido de caracteres*/
+    if (valor.length > maximo) {
+        alert("O campo de texto está com mais caracteres do que o máximo");
         return false;
     }
     return true;
