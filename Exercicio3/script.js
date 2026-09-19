@@ -18,9 +18,11 @@ function q5_validar() {
     validarCampoCheckbox("q5check");
 }
 function q6_validar() {
-    q6CampoCheckboxContagem("q6check1","q6check2","q6check3","q6check4","q6check5");
+    q6CampoCheckboxContagem("q6check1", "q6check2", "q6check3", "q6check4", "q6check5");
 }
-function q7_validar() { }
+function q7_validar() {
+    validarCampoRadio("q7radio");
+}
 function q8_validar() { }
 
 //Funções por tipo de verificação
@@ -141,4 +143,30 @@ function q6CampoCheckboxContagem(id1, id2, id3, id4, id5) {
     alert("O numero de checkboxs selecionadas foi: " + contagem);
 
     return true;
+}
+
+function validarCampoRadio(nome) {
+    var elementos = document.getElementsByName(nome);
+    /*testa se o elemento existe e não é nulo*/
+    if (elementos == null || elementos.length == 0) {
+        alert("Não existem elementos");
+        return false;
+    }
+    var selecionado = false;
+    var opcao;
+    /*verifica se algum elemento foi selecionado*/
+    for (var i = 0; i < elementos.length; i++) {
+        if (elementos[i].checked) {
+            selecionado = true;
+            opcao = i + 1;
+            break;
+        }
+    }
+    /*caso algum elemento tenha sido selecionado, diz qual foi*/
+    if (selecionado == true) {
+        alert("Opção selecionada: " + opcao)
+        return true;
+    }
+    alert("Nenhuma opção selecionada");
+    return false;
 }
