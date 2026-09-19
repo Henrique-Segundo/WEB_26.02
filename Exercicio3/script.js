@@ -17,7 +17,9 @@ function q4_validar() {
 function q5_validar() {
     validarCampoCheckbox("q5check");
 }
-function q6_validar() { }
+function q6_validar() {
+    q6CampoCheckboxContagem("q6check1","q6check2","q6check3","q6check4","q6check5");
+}
 function q7_validar() { }
 function q8_validar() { }
 
@@ -87,11 +89,13 @@ function validarCampoNumericoInteiroPositivo(id) {
 
 function validarCampoCombobox(id) {
     var elemento = document.getElementById(id);
+    /*testa se o elemento existe*/
     if (elemento == null) {
         alert("O elemento não existe");
         return false;
     }
     var indice = document.getElementById(id).selectedIndex;
+    /*testa se alguma opção foi selecionada*/
     if (indice == null || indice < 0) {
         alert("Nenhuma opção selecionada");
         return false;
@@ -101,13 +105,40 @@ function validarCampoCombobox(id) {
 
 function validarCampoCheckbox(id) {
     var elemento = document.getElementById(id);
+    /*testa se o elemento existe*/
     if (elemento == null) {
         alert("O elemento não existe");
         return false;
     }
+    /*testa se o checkbox foi selecionado*/
     if (!elemento.checked) {
         alert("O checkbox obrigatório não foi selecionado");
         return false;
     }
+    return true;
+}
+
+function q6CampoCheckboxContagem(id1, id2, id3, id4, id5) {
+    var el1 = document.getElementById(id1);
+    var el2 = document.getElementById(id2);
+    var el3 = document.getElementById(id3);
+    var el4 = document.getElementById(id4);
+    var el5 = document.getElementById(id5);
+
+    /*testa se todos os eleemntos existem*/
+    if (el1 == null || el2 == null || el3 == null || el4 == null || el5 == null) {
+        alert("Algum dos elementos não existe");
+        return false;
+    }
+
+    var contagem = 0;
+    if (el1.checked) { contagem++; }
+    if (el2.checked) { contagem++; }
+    if (el3.checked) { contagem++; }
+    if (el4.checked) { contagem++; }
+    if (el5.checked) { contagem++; }
+
+    alert("O numero de checkboxs selecionadas foi: " + contagem);
+
     return true;
 }
