@@ -23,7 +23,11 @@ function q6_validar() {
 function q7_validar() {
     validarCampoRadio("q7radio");
 }
-function q8_validar() { }
+function q8_validar() {
+    validarCampoTextoObrigatorio("q8nome");
+    validarCampoTextoObrigatorio("q8login");
+    q8ValidarSenha("q8senha");
+}
 
 //Funções por tipo de verificação
 
@@ -169,4 +173,36 @@ function validarCampoRadio(nome) {
     }
     alert("Nenhuma opção selecionada");
     return false;
+}
+
+function q8ValidarSenha(id) {
+    /*testa se o elemento existe e não está vazio*/
+    if (!validarCampoTextoObrigatorio(id)) {
+        return false;
+    }
+    var valor = document.getElementById(id).value;
+    /*testa se o elemento tem menos de 4 caracteres*/
+    if (valor.length < 4) {
+        alert("O campo de senha está com menos de 4 caracteres");
+        return false;
+    }
+    /*testa se o elemento tem algum caractere especial*/
+    const especial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    if (!especial.test(valor)) {
+        alert("O campo senha está sem um caractere especial");
+        return false;
+    }
+    /*testa se o elemento tem alguma letra maiuscula*/
+    const temMaiuscula = /[A-Z]/;
+    if (!temMaiuscula.test(valor)) {
+        alert("O campo senha está sem uma letra maiuscula");
+        return false;
+    }
+    /*testa se o elemento tem alguma letra minuscula*/
+    const temMinuscula = /[a-z]/;
+    if (!temMinuscula.test(valor)) {
+        alert("O campo senha está sem uma letra minuscula");
+        return false;
+    }
+    return true;
 }
