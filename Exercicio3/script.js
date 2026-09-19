@@ -11,8 +11,12 @@ function q2_validar() {
 function q3_validar() {
     validarCampoNumericoInteiroPositivo("q3txt");
 }
-function q4_validar() { }
-function q5_validar() { }
+function q4_validar() {
+    validarCampoCombobox("q4combo");
+}
+function q5_validar() {
+    validarCampoCheckbox("q5check");
+}
 function q6_validar() { }
 function q7_validar() { }
 function q8_validar() { }
@@ -66,17 +70,44 @@ function validarCampoNumerico(id) {
     }
     return true;
 }
-function validarCampoNumericoInteiroPositivo(id){
+function validarCampoNumericoInteiroPositivo(id) {
     /*testa se o elemento existe, não está vazio ou é não numerico*/
-    if(!validarCampoNumerico(id)){
+    if (!validarCampoNumerico(id)) {
         return false;
     }
     var valor = document.getElementById(id).value;
     /*testa se o numero é positivo*/
-    if(valor <= 0){
+    if (valor <= 0) {
         alert("valor numérico negativo ou igual a 0")
         return false;
     }
     /*testa se o numero é inteiro*/
     //falta fazer
+}
+
+function validarCampoCombobox(id) {
+    var elemento = document.getElementById(id);
+    if (elemento == null) {
+        alert("O elemento não existe");
+        return false;
+    }
+    var indice = document.getElementById(id).selectedIndex;
+    if (indice == null || indice < 0) {
+        alert("Nenhuma opção selecionada");
+        return false;
+    }
+    return true;
+}
+
+function validarCampoCheckbox(id) {
+    var elemento = document.getElementById(id);
+    if (elemento == null) {
+        alert("O elemento não existe");
+        return false;
+    }
+    if (!elemento.checked) {
+        alert("O checkbox obrigatório não foi selecionado");
+        return false;
+    }
+    return true;
 }
