@@ -13,8 +13,8 @@ import java.util.List;
 public class UsuarioDAO {
 
     private static final String JDBC_DRIVER = "org.postgresql.Driver";
-    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/smdecommerce";
-    private static final String JDBC_USUARIO = "smdecommerce";
+    private static final String JDBC_URL = "jdbc:postgresql://localhost:5432/loja_cartas";
+    private static final String JDBC_USUARIO = "aluno";
     private static final String JDBC_SENHA = "ufc123";
 
     /**
