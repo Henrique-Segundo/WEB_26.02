@@ -1,6 +1,6 @@
 package modelo;
 
-public class Mosntro {
+public class Monsntro {
     
     private Integer card_id;
     private Integer id;
